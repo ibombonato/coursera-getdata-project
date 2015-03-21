@@ -107,7 +107,7 @@ writeTidyData <- function(data){
 #########################################################################
 # Function for read, return and show the tidy data from the disk
 #########################################################################
-readTidyData <- function(){
+readTidyDataFromDisk <- function(){
     message("Reading projectTidy.txt and open a view of it.")
     data <- read.table("projectTidy.txt", header = TRUE)
     View(data)
@@ -121,6 +121,6 @@ tidyData <- getTidyData();
 writeTidyData(tidyData);
 
 # Reading the data from the disk
-data <- readTidyData();
+data <- readTidyDataFromDisk();
 
 message("Done.")

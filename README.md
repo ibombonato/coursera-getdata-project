@@ -1,8 +1,8 @@
 # Coursera Getting and Cleaning Data Project
 This readme contains the instructions that the peer review needs to follow, to be able to read and reproduce the steps of the project.  
 The final tidy dataset have 180 observations(rows) and 68 variables(columns).  
-The CodeBook are inside this repository, in a file called [CodeBook.md](https://github.com/ibombonato/coursera-getdata-project/blob/master/CodeBook.md). It contains details about the dataset and it's variables.  
-You need and internet connection to run the analysis the easier way. Although, you can run it offline if you have the dataset properly downloaded and extracted in the right folder and also the dplyr package installed, but this is not recommended.
+The CodeBook are inside this repository, in a file called [CodeBook.md](https://github.com/ibombonato/coursera-getdata-project/blob/master/CodeBook.md). It contains details about the dataset, it's variables and the experimental design.  
+You need and internet connection to run the analysis the easier way. Although, you can run it offline if you have the dataset properly downloaded and extracted in the right folder and also the dplyr package installed if you follow the instructions exactly, but this is not recommended.
 
 ## Reading the uploaded tidy dataset for evaluation
 You have two ways to read the final tidy dataset that was uploaded on the project submission, witch is listed bellow. __I recomend the method #1__ because its easier, but you are free to do the #2.
@@ -81,7 +81,7 @@ writeTidyData(){
 ```			
 ```R
 # This function will read the file "projectTidy.txt" in your working directory and open a view of it. So you can view the data.
-readTidyData(){
+readTidyDataFromDisk(){
 	...Some code inside...
 	Lines 110 to 115
 }
@@ -97,6 +97,6 @@ writeTidyData(tidyData);
 ```	
 	7. Run the code at line #124 to read the "projectTidy.txt" on the disk, assign it to a variable called "data" and show a view of it on R.
 ```R
-data <- readTidyData();
+data <- readTidyDataFromDisk();
 ```	
 You are done!  

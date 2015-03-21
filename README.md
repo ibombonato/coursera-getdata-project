@@ -70,20 +70,19 @@ For this method work, you need to have the project dataset extrated in your work
 This folder should have the files inside of it.  
 __If the step above was done incorrectly, the script will not work!__
 ```R
+# This function will write a file called "projectTidy.txt" in your working directory
 writeTidyData(){
 	...Some code inside...
 	Lines 102 to 105
 }
 ```			
-		* This function will write a file called "projectTidy.txt" in your working directory
 ```R
+# This function will read the file "projectTidy.txt" in your working directory and open a view of it. So you can view the data.
 readTidyData(){
 	...Some code inside...
 	Lines 110 to 115
 }
 ```	
-This function will read the file "projectTidy.txt" in your working directory and open a view of it. So you can view the data.
-
 	4. You should run the code block for all three function to create the functions in the R environment.
 	5. Run the code at line #118 to generate a variable called "tidyData" that will contains the tidy dataset
 ```R
@@ -94,7 +93,6 @@ tidyData <- getTidyData(FALSE);
 writeTidyData(tidyData);
 ```	
 	7. Run the code at line #124 to read the "projectTidy.txt" on the disk, assign it to a variable called "data" and show a view of it on R.
-```R
 ```R
 data <- readTidyData();
 ```	

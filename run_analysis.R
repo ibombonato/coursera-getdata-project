@@ -12,9 +12,13 @@ getTidyData <- function(skipDownload = FALSE){
     if(!skipDownload){
         fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
         fileName <- "project.zip"
+        message("Downloading ziped dataset...")
         download.file(fileUrl, fileName)
+        message("Unzipping the file...")
         unzip(fileName)
     }
+    
+    message("Reading the data...")
     
     #Setting the data folder
     datafolder <- "UCI HAR Dataset"
@@ -30,7 +34,9 @@ getTidyData <- function(skipDownload = FALSE){
     subject_test <- read.table(paste("./",datafolder,"/test/subject_test.txt", sep = ""))
     subject_train <- read.table(paste("./",datafolder,"/train/subject_train.txt", sep = ""))
     
-    # Combine the train and tests dataset of Smartphone data
+    message("Processing the data...")
+
+        # Combine the train and tests dataset of Smartphone data
     x_merged <- rbind(x_test, x_train)
     # Combine datasets of Activity data
     y_merged <- rbind(y_test, y_train)
@@ -85,6 +91,7 @@ getTidyData <- function(skipDownload = FALSE){
     # Rename columns with a more readable name
     names(summaryByActivityAndSubject) <- sapply(names(summaryByActivityAndSubject), FUN = prettyName, USE.NAMES = TRUE)
     
+    message("Returning the data...")
     # Return the tidy summary without print it to the console
     invisible(summaryByActivityAndSubject)
 }
@@ -93,6 +100,7 @@ getTidyData <- function(skipDownload = FALSE){
 # Function for writting the tidy data to disk
 #########################################################################
 writeTidyData <- function(data){
+    message("Writting projectTidy.txt on the disk...")
     write.table(data, file = "projectTidy.txt", row.names = FALSE)
 }
 
@@ -100,6 +108,7 @@ writeTidyData <- function(data){
 # Function for read and show the tidy data from the disk
 #########################################################################
 readTidyData <- function(){
+    message("Reading projectTidy.txt and open a view of it.")
     data <- read.table("projectTidy.txt", header = TRUE)
     View(data)
 }
@@ -113,3 +122,5 @@ writeTidyData(tidyData);
 
 # Reading the data from the disk
 readTidyData();
+
+message("Done.")

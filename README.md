@@ -62,8 +62,8 @@ getTidyData(skipDownload = FALSE){
 The __getTidyData__ function is the main function of this analysis. It will download the dataset from web, 
 unzip it, process the data and return a data.frame whitin the tidy dataset asked in the project.
 The skipDownload parameter, witch is set to FALSE as default, should only be changed to TRUE, if you have any problemn wunning the function with the default parameters, or if you do not have an internet connection, but already have the dataset in your computer.  
-For this method work, __you need to have the project dataset extrated in your working directory, inside a folder called "UCI HAR Dataset"__
-This folder should have the files inside of it.
+For this method work, you need to have the project dataset extrated in your working directory, inside a folder called "UCI HAR Dataset"
+This folder should have the files inside of it.  
 __If the step above was done incorrectly, the script will not work!__
 ```R
 writeTidyData(){
@@ -78,7 +78,8 @@ readTidyData(){
 	Lines 110 to 115
 }
 ```	
-This function will read the file "projectTidy.txt" in your working directory and open a view of it. So you can view the data.  
+This function will read the file "projectTidy.txt" in your working directory and open a view of it. So you can view the data.
+
 	4. You should run the code block for all three function to create the functions in the R environment.
 	5. Run the code at line #118 to generate a variable called "tidyData" that will contains the tidy dataset
 ```R
@@ -88,7 +89,7 @@ tidyData <- getTidyData(FALSE);
 ```R
 writeTidyData(tidyData);
 ```	
-	5. Run the code at line #124 to read the "projectTidy.txt" on the disk, assign it to a variable called "data" and show a view of it on R.
+	7. Run the code at line #124 to read the "projectTidy.txt" on the disk, assign it to a variable called "data" and show a view of it on R.
 ```R
 ```R
 data <- readTidyData();

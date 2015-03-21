@@ -1,6 +1,7 @@
 # Coursera Getting and Cleaning Data Project
-This readme contains the instructions that the peer review needs to follow, to be able to read and reproduce the steps of the project.
-The CodeBook are inside this repository, in a file called __CodeBook.md__. It contains details about the dataset and it's variables.
+This readme contains the instructions that the peer review needs to follow, to be able to read and reproduce the steps of the project.  
+The final tidy dataset have 180 observations(rows) and 68 variables(columns).  
+The CodeBook are inside this repository, in a file called __CodeBook.md__. It contains details about the dataset and it's variables.  
 You need and internet connection to run the analysis the easier way. Although, you can run it offline if you have the dataset properly downloaded and extracted in the right folder and also the dplyr package installed, but this is not recommended.
 
 ## Reading the uploaded tidy dataset for evaluation

@@ -34,15 +34,16 @@ You have three ways for run the analisys and get the tidy dataset. Method #1 is 
 ```R
 source("http://rawgit.com/ibombonato/coursera-getdata-project/master/run_analysis.R")
 ```
-You are done!
+You are done!  
 To see what happens "behind the scenes", read the section "What Happened Behind the Scenes" located bellow in this document.
 
 ##### #2 Run the script manually:
 	1. Download and put the "run_analysis.R" in your working directory.
 	2. Open and R console or RStudio
 	2. Run the command bellow:
-	```R
-	source("run_analysis.R")
-	```
-You are done!
+```R
+source("run_analysis.R")
+```
+You are done!  
 To see what happens "behind the scenes", read the section "What Happened Behind the Scenes" located bellow in this document.
+

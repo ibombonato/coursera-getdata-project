@@ -4,6 +4,22 @@ The final tidy dataset have 180 observations(rows) and 68 variables(columns).
 The CodeBook are inside this repository, in a file called __CodeBook.md__. It contains details about the dataset and it's variables.  
 You need and internet connection to run the analysis the easier way. Although, you can run it offline if you have the dataset properly downloaded and extracted in the right folder and also the dplyr package installed, but this is not recommended.
 
+## Information about the dataset
+This sample is based on the [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones), where they collected data from the accelerometers of the Samsung Galaxy S smartphone. The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. You can find more information about the original experiment in the link above.  
+
+The project goal, was to create a tidy dataset containing the mean for observations and variables grouped by Acitvity and Subject (Volunteer), extracting only the measurements on the mean and standard deviation for each measurement for further analysis.
+
+To achive the tidy data, after reading the original dataset documentation, I filtered only the variables that contains the exact "mean()" or "std()" string in its name. Other variables were not considered, since they were outside the project scope. 
+
+According to the Coursera Class, a tidy data consistis of:
+	* Each variable you measure should be in one column
+	* Each different observation of that variable should be in a different row
+	* Include a row at the top of each file with variable names.
+	* Variables should have human readable names
+	* In general data should be saved in one file per table.
+
+Information about how I process the data and the scripts instructions are bellow in this ReadMe.
+
 ## Reading the uploaded tidy dataset for evaluation
 You have two ways to read the final tidy dataset that was uploaded on the project submission, witch is listed bellow. __I recomend the method #1__ because its easier, but you are free to do the #2.
 
@@ -59,17 +75,18 @@ To see what happens inside the script, read the [method #3](#method-3-run-the-sc
 	2. Open the "run_analysis.R" file on R or RStudio
 	3. This file contains 3 functions:
 ```R
-getTidyData(skipDownload = FALSE){
+getTidyData(){
 	...Some code inside...
 	Lines 4 to 97
 }
 ```
 The __getTidyData__ function is the main function of this analysis. It will download the dataset from web, 
-unzip it, process the data and return a data.frame whitin the tidy dataset asked in the project.
-The skipDownload parameter, witch is set to FALSE as default, should only be changed to TRUE, if you have any problemn when running the function with the default parameters, or if you do not have an internet connection, but already have the dataset and dplyr package installed in your computer.  
-For this method work, you need to have the project dataset extrated in your working directory, inside a folder called "UCI HAR Dataset"
-This folder should have the files inside of it.  
-__If the step above was done incorrectly, the script will not work!__
+unzip it, process the data and return a data.frame whitin the tidy dataset asked in the project.  
+
+> *Disclaimer: If you have any problemn downloading the data, or if you do not have an internet connection, but already have the dataset and dplyr package installed in your computer, you can comment lines 13 to 18 and move on. For this method work, you need to have the project dataset extrated in your working directory, inside a folder called "UCI HAR Dataset"
+> This folder should have the files inside of it.  
+> __If this was done incorrectly, the script will not work!__*
+
 ```R
 # This function will write a file called "projectTidy.txt" in your working directory
 writeTidyData(){

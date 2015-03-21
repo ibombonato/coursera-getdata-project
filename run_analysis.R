@@ -1,22 +1,22 @@
 #########################################################################
 # Function for getting the tidy data from the UCI datasets
 #########################################################################
-getTidyData <- function(skipDownload = FALSE){
+getTidyData <- function(){
 
     # Requiring dplyr package
     # If you got and error here, you should install the dplyr package with command:
     # install.packages("dplyr")
+    
     library(dplyr)
 
     # Download and unzip the files from web unless you choose to skip it
-    if(!skipDownload){
-        fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-        fileName <- "project.zip"
-        message("Downloading ziped dataset...")
-        download.file(fileUrl, fileName)
-        message("Unzipping the file...")
-        unzip(fileName)
-    }
+    fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+    fileName <- "project.zip"
+    message("Downloading ziped dataset...")
+    download.file(fileUrl, fileName)
+    message("Unzipping the file...")
+    unzip(fileName)
+    
     
     message("Reading the data...")
     
@@ -115,7 +115,7 @@ readTidyData <- function(){
 }
 
 # Creating and getting the tidy data from the datasets
-tidyData <- getTidyData(FALSE);
+tidyData <- getTidyData();
 
 # Writting the data to disk
 writeTidyData(tidyData);

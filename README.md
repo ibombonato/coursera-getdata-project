@@ -12,7 +12,7 @@ You have two ways to read the final tidy dataset that was uploaded on the projec
 This code will download the .txt file submitted in coursera project from the web, read it and open a view of it on R.
 
 ```R
-address <- "http://s3.amazonaws.com/coursera-uploads/user-84fdf7cf6f9e2bb6bf6fdf14/973499/asst-3/3dbaf7a0cf6411e4acbab19e5f79ee5b.txt"
+address <- "http://s3.amazonaws.com/coursera-uploads/user-84fdf7cf6f9e2bb6bf6fdf14/973499/asst-3/f72d4690cf8f11e495547d68e2133ca7.txt"
 address <- sub("^https", "http", address)
 data <- read.table(url(address), header = TRUE)
 View(data)

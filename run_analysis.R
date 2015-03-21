@@ -78,8 +78,8 @@ getTidyData <- function(){
     prettyName <- function(x){
         x <- gsub("^t", "Time",x)
         x <- gsub("^f", "Frequency",x)
-        x <- gsub("Acc-", "Accelerometer-", x)
-        x <- gsub("Gyro-", "Gyroscope-", x)
+        x <- gsub("Acc", "Accelerometer", x)
+        x <- gsub("Gyro", "Gyroscope", x)
         x <- gsub("std\\(\\)", "StandardDeviation", x)
         x <- gsub("mean\\(\\)", "Mean", x)
         x <- gsub("-X$", "Of-X", x)
@@ -91,7 +91,7 @@ getTidyData <- function(){
     # Rename columns with a more readable name
     names(summaryByActivityAndSubject) <- sapply(names(summaryByActivityAndSubject), FUN = prettyName, USE.NAMES = TRUE)
     
-    message("Returning the data...")
+    message("Ending data processing and returning the generated data")
     # Return the tidy summary without print it to the console
     invisible(summaryByActivityAndSubject)
 }

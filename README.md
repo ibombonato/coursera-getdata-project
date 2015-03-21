@@ -1,27 +1,12 @@
 # Coursera Getting and Cleaning Data Project
 This readme contains the instructions that the peer review needs to follow, to be able to read and reproduce the steps of the project.  
 The final tidy dataset have 180 observations(rows) and 68 variables(columns).  
-The CodeBook are inside this repository, in a file called __CodeBook.md__. It contains details about the dataset and it's variables.  
+The CodeBook are inside this repository, in a file called [CodeBook.md](https://github.com/ibombonato/coursera-getdata-project/blob/master/CodeBook.md). It contains details about the dataset and it's variables.  
 You need and internet connection to run the analysis the easier way. Although, you can run it offline if you have the dataset properly downloaded and extracted in the right folder and also the dplyr package installed, but this is not recommended.
-
-## Information about the dataset
-This sample is based on the [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones), where they collected data from the accelerometers of the Samsung Galaxy S smartphone. The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. You can find more information about the original experiment in the link above.  
-
-The project goal, was to create a tidy dataset containing the mean for observations and variables grouped by Acitvity and Subject (Volunteer), extracting only the measurements on the mean and standard deviation for each measurement for further analysis.
-
-To achive the tidy data, after reading the original dataset documentation, I filtered only the variables that contains the exact "mean()" or "std()" string in its name. Other variables were not considered, since they were outside the project scope. 
-
-According to the Coursera Class, a tidy data consistis of:
-	* Each variable you measure should be in one column
-	* Each different observation of that variable should be in a different row
-	* Include a row at the top of each file with variable names.
-	* Variables should have human readable names
-	* In general data should be saved in one file per table.
-
-Information about how I process the data and the scripts instructions are bellow in this ReadMe.
 
 ## Reading the uploaded tidy dataset for evaluation
 You have two ways to read the final tidy dataset that was uploaded on the project submission, witch is listed bellow. __I recomend the method #1__ because its easier, but you are free to do the #2.
+* All code was created and tested using R version 3.1.3 *
 
 ##### Method #1 Run this code on R:
 This code will download the .txt file submitted in coursera project from the web, read it and open a view of it on R.
@@ -104,7 +89,7 @@ readTidyData(){
 	4. You should run the code block for all three function to create the functions in the R environment.
 	5. Run the code at line #118 to generate a variable called "tidyData" that will contains the tidy dataset
 ```R
-tidyData <- getTidyData(FALSE);
+tidyData <- getTidyData();
 ```	
 	6. Run the code at line #121 to write the dataset to disk in a file called "projectTidy.txt"
 ```R

@@ -16,17 +16,17 @@ The project goal, was to create a tidy dataset based on the raw data, containing
 
 After reading the original dataset documentation, I filtered only the variables that contains the exact "mean()" or "std()" string in it's name. Other variables, containing strings like -meanFreq()- were not considered since they were outside of the project scope. 
 
-The general principles of tidy data are:
-	* Each variable you measure should be in one column
-	* Each different observation of that variable should be in a different row
-	* There should be one table for each "kind" of variable
-	* If you have multiple tables, they should include a column in the table that allows them to be linked
-	* Some other important tips:
-		* Include a row at the top of each file with variable names.
-		* Variables should have human readable names
-		* In general data should be saved in one file per table.
+The general principles of tidy data are:  
+* Each variable you measure should be in one column
+* Each different observation of that variable should be in a different row
+* There should be one table for each "kind" of variable
+* If you have multiple tables, they should include a column in the table that allows them to be linked
+* Some other important tips:
+	* Include a row at the top of each file with variable names.
+	* Variables should have human readable names
+	* In general data should be saved in one file per table.
 
-When you run the script, you will have a tidy dataset containing one table with 180 observations(rows) and 68 variables(columns), with human readable variable names, each measurement in a diferent column and each observation in a diferent row. With matches the tidy principle.
+When you run the script, you will have a tidy dataset containing one table with 180 observations(rows) and 68 variables(columns), with human readable variable names, each measurement in a diferent column and each observation in a diferent row. which matches the tidy data principle.
 
 Information about how I process the data and the script instructions are in the [ReadMe file](https://github.com/ibombonato/coursera-getdata-project).
 

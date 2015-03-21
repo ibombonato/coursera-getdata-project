@@ -34,7 +34,8 @@ You have three ways for run the analisys and get the tidy dataset. Method #1 is 
 ```R
 source("http://rawgit.com/ibombonato/coursera-getdata-project/master/run_analysis.R")
 ```
-You are done! A view from R should open with the tidy dataset for your analysis.  
+You are done!  
+A view from R should open with the tidy dataset for your analysis.  
 To see what happens inside the script, read the __method #3__ bellow.
 
 ##### __Method #2__ Run the script direct on your computer:
@@ -44,7 +45,8 @@ To see what happens inside the script, read the __method #3__ bellow.
 ```R
 source("run_analysis.R")
 ```
-You are done! A view from R should open with the tidy dataset for your analysis.  
+You are done!  
+A view from R should open with the tidy dataset for your analysis.  
 To see what happens inside the script, read the __method #3__ bellow.
 
 ##### __Method #3__ Run the script "manually":
@@ -57,12 +59,12 @@ getTidyData(skipDownload = FALSE){
 	Lines 4 to 97
 }
 ```
-		* The __getTidyData__ function is the main function of this analysis. It will download the dataset from web, 
+The __getTidyData__ function is the main function of this analysis. It will download the dataset from web, 
 unzip it, process the data and return a data.frame whitin the tidy dataset asked in the project.
-		* The skipDownload parameter, witch is set to FALSE as default, should only be changed to TRUE, if you have any problemn wunning the function with the default parameters, or if you do not have an internet connection, but already have the dataset in your computer.  
-		For this method work, __you need to have the project dataset extrated in your working directory, inside a folder called "UCI HAR Dataset"__
-		This folder should have the files inside of it.
-		__If the step above was done incorrectly, the script will not work!__
+The skipDownload parameter, witch is set to FALSE as default, should only be changed to TRUE, if you have any problemn wunning the function with the default parameters, or if you do not have an internet connection, but already have the dataset in your computer.  
+For this method work, __you need to have the project dataset extrated in your working directory, inside a folder called "UCI HAR Dataset"__
+This folder should have the files inside of it.
+__If the step above was done incorrectly, the script will not work!__
 ```R
 writeTidyData(){
 	...Some code inside...
@@ -76,7 +78,7 @@ readTidyData(){
 	Lines 110 to 115
 }
 ```	
-		* This function will read the file "projectTidy.txt" in your working directory and open a view of it. So you can view the data.
+This function will read the file "projectTidy.txt" in your working directory and open a view of it. So you can view the data.  
 	4. You should run the code block for all three function to create the functions in the R environment.
 	5. Run the code at line #118 to generate a variable called "tidyData" that will contains the tidy dataset
 ```R

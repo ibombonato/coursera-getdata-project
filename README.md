@@ -29,7 +29,7 @@ View(data)
 
 ## Running the run_analysis.R to reproduce the steps
 You have three ways for run the analisys and get the tidy dataset. Method #1 is recomend, because you just need to run one line of code.  
-For all 3 methods, certify that you have the "dplyr" package installed on R. If you do not have it, or if you dont have sure, please, run this code before continue:
+For all 3 methods, certify that you have the "dplyr" package installed on R. If you do not have it, or if you dont have sure, please, run this code on R before continue:
 ```R
 install.packages("dplyr")
 ```

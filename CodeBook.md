@@ -39,4 +39,83 @@ When you run the script, you will have a tidy dataset containing one table with 
 Information about how I process the data and the script instructions are in the [ReadMe file](https://github.com/ibombonato/coursera-getdata-project).
 
 ## Code book
+"Activity" - Shows the activity that the subject was performing: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+"Subject" - The volunteer of the measurements
 
+The other variables, are almost self descriptive, and __their values in this tidy dataset are the mean of all the observations in the raw dataset, grouped by Activity and Subject.__
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals Accelerometer-XYZ and Gyroscope-XYZ. These time domain signals (prefix 'Time') were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (TimeBodyAccelerometer-XYZ and TimeGravityAccelerometer-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (TimeBodyAccelerometerJerk-XYZ and TimeBodyGyroscopeJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (TimeBodyAccelerometerMag, ...). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing FrequencyBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+"TimeBodyAccelerometer.MeanOf.X"                         
+"TimeBodyAccelerometer.MeanOf.Y"                         
+"TimeBodyAccelerometer.MeanOf.Z"                         
+"TimeGravityAccelerometer.MeanOf.X"                      
+"TimeGravityAccelerometer.MeanOf.Y"                      
+"TimeGravityAccelerometer.MeanOf.Z"                      
+"TimeBodyAccelerometerJerk.MeanOf.X"                     
+"TimeBodyAccelerometerJerk.MeanOf.Y"                     
+"TimeBodyAccelerometerJerk.MeanOf.Z"                     
+"TimeBodyGyroscope.MeanOf.X"                             
+"TimeBodyGyroscope.MeanOf.Y"                             
+"TimeBodyGyroscope.MeanOf.Z"                             
+"TimeBodyGyroscopeJerk.MeanOf.X"                         
+"TimeBodyGyroscopeJerk.MeanOf.Y"                         
+"TimeBodyGyroscopeJerk.MeanOf.Z"                         
+"TimeBodyAccelerometerMag.Mean"                          
+"TimeGravityAccelerometerMag.Mean"                       
+"TimeBodyAccelerometerJerkMag.Mean"                      
+"TimeBodyGyroscopeMag.Mean"                              
+"TimeBodyGyroscopeJerkMag.Mean"                          
+"FrequencyBodyAccelerometer.MeanOf.X"                    
+"FrequencyBodyAccelerometer.MeanOf.Y"                    
+"FrequencyBodyAccelerometer.MeanOf.Z"                    
+"FrequencyBodyAccelerometerJerk.MeanOf.X"                
+"FrequencyBodyAccelerometerJerk.MeanOf.Y"                
+"FrequencyBodyAccelerometerJerk.MeanOf.Z"                
+"FrequencyBodyGyroscope.MeanOf.X"                        
+"FrequencyBodyGyroscope.MeanOf.Y"                        
+"FrequencyBodyGyroscope.MeanOf.Z"                        
+"FrequencyBodyAccelerometerMag.Mean"                     
+"FrequencyBodyBodyAccelerometerJerkMag.Mean"             
+"FrequencyBodyBodyGyroscopeMag.Mean"                     
+"FrequencyBodyBodyGyroscopeJerkMag.Mean"                 
+"TimeBodyAccelerometer.StandardDeviationOf.X"            
+"TimeBodyAccelerometer.StandardDeviationOf.Y"            
+"TimeBodyAccelerometer.StandardDeviationOf.Z"            
+"TimeGravityAccelerometer.StandardDeviationOf.X"         
+"TimeGravityAccelerometer.StandardDeviationOf.Y"         
+"TimeGravityAccelerometer.StandardDeviationOf.Z"         
+"TimeBodyAccelerometerJerk.StandardDeviationOf.X"        
+"TimeBodyAccelerometerJerk.StandardDeviationOf.Y"        
+"TimeBodyAccelerometerJerk.StandardDeviationOf.Z"        
+"TimeBodyGyroscope.StandardDeviationOf.X"                
+"TimeBodyGyroscope.StandardDeviationOf.Y"                
+"TimeBodyGyroscope.StandardDeviationOf.Z"                
+"TimeBodyGyroscopeJerk.StandardDeviationOf.X"            
+"TimeBodyGyroscopeJerk.StandardDeviationOf.Y"            
+"TimeBodyGyroscopeJerk.StandardDeviationOf.Z"            
+"TimeBodyAccelerometerMag.StandardDeviation"             
+"TimeGravityAccelerometerMag.StandardDeviation"          
+"TimeBodyAccelerometerJerkMag.StandardDeviation"         
+"TimeBodyGyroscopeMag.StandardDeviation"                 
+"TimeBodyGyroscopeJerkMag.StandardDeviation"             
+"FrequencyBodyAccelerometer.StandardDeviationOf.X"       
+"FrequencyBodyAccelerometer.StandardDeviationOf.Y"       
+"FrequencyBodyAccelerometer.StandardDeviationOf.Z"       
+"FrequencyBodyAccelerometerJerk.StandardDeviationOf.X"   
+"FrequencyBodyAccelerometerJerk.StandardDeviationOf.Y"   
+"FrequencyBodyAccelerometerJerk.StandardDeviationOf.Z"   
+"FrequencyBodyGyroscope.StandardDeviationOf.X"           
+"FrequencyBodyGyroscope.StandardDeviationOf.Y"           
+"FrequencyBodyGyroscope.StandardDeviationOf.Z"           
+"FrequencyBodyAccelerometerMag.StandardDeviation"        
+"FrequencyBodyBodyAccelerometerJerkMag.StandardDeviation"
+"FrequencyBodyBodyGyroscopeMag.StandardDeviation"        
+"FrequencyBodyBodyGyroscopeJerkMag.StandardDeviation"    

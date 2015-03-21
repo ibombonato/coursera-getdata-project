@@ -26,7 +26,11 @@ View(data)
 ```
 
 ### Running the run_analysis.R to reproduce the steps
-You have three ways for run the analisys and get the tidy dataset. Method #1 is recomend, because you just need to run one line of code.
+You have three ways for run the analisys and get the tidy dataset. Method #1 is recomend, because you just need to run one line of code.  
+For all 3 methods, certify that you have the "dplyr" package installed on R. If you do not have it, or if you dont have sure, please, run this code before continue:
+```R
+install.packages("dplyr")
+```
 
 ##### __Method #1__ Single command run:
 	1. Certify that you have an active internet connection
@@ -41,7 +45,7 @@ To see what happens inside the script, read the __method #3__ bellow.
 ##### __Method #2__ Run the script direct on your computer:
 	1. Download and put the "run_analysis.R" in your working directory.
 	2. Open and R console or RStudio
-	2. Run the command bellow:
+	3. Run the command bellow:
 ```R
 source("run_analysis.R")
 ```
@@ -61,7 +65,7 @@ getTidyData(skipDownload = FALSE){
 ```
 The __getTidyData__ function is the main function of this analysis. It will download the dataset from web, 
 unzip it, process the data and return a data.frame whitin the tidy dataset asked in the project.
-The skipDownload parameter, witch is set to FALSE as default, should only be changed to TRUE, if you have any problemn wunning the function with the default parameters, or if you do not have an internet connection, but already have the dataset in your computer.  
+The skipDownload parameter, witch is set to FALSE as default, should only be changed to TRUE, if you have any problemn when running the function with the default parameters, or if you do not have an internet connection, but already have the dataset and dplyr package installed in your computer.  
 For this method work, you need to have the project dataset extrated in your working directory, inside a folder called "UCI HAR Dataset"
 This folder should have the files inside of it.  
 __If the step above was done incorrectly, the script will not work!__

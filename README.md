@@ -28,16 +28,16 @@ View(data)
 ### Running the run_analysis.R to reproduce the steps
 You have three ways for run the analisys and get the tidy dataset. Method #1 is recomend, because you just need to run one line of code.
 
-##### #1 Single command run:
+##### __Method #1__ Single command run:
 	1. Certify that you have an active internet connection
 	2. Run the code bellow:
 ```R
 source("http://rawgit.com/ibombonato/coursera-getdata-project/master/run_analysis.R")
 ```
 You are done!  
-To see what happens "behind the scenes", read the section "What Happened Behind the Scenes" located bellow in this document.
+To see what happens inside the script, read the __method #3__ bellow.
 
-##### #2 Run the script manually:
+##### __Method #2__ Run the script direct on your computer:
 	1. Download and put the "run_analysis.R" in your working directory.
 	2. Open and R console or RStudio
 	2. Run the command bellow:
@@ -45,5 +45,28 @@ To see what happens "behind the scenes", read the section "What Happened Behind 
 source("run_analysis.R")
 ```
 You are done!  
-To see what happens "behind the scenes", read the section "What Happened Behind the Scenes" located bellow in this document.
+To see what happens inside the script, read the __method #3__ bellow.
 
+##### __Method #3__ Run the script "manually":
+	1. Download and put the "run_analysis.R" in your working directory.
+	2. Open the "run_analysis.R" file on R or RStudio
+	3. This file contains 3 functions:
+```R
+getTidyData(skipDownload = FALSE){
+	...Some code inside...
+}
+```
+		* This function has a default parameter will download the zipped data from web
+```R
+writeTidyData(){
+	...Some code inside...
+}
+```			
+		* This function will write a file called "projectTidy.txt" in your working directory
+```R
+readTidyData(){
+	...Some code inside...
+}
+```	
+		* This function will read the file "projectTidy.txt" in your working directory and open a view of it. So you can view the data.
+You are done!  

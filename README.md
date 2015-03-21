@@ -41,7 +41,7 @@ source("http://rawgit.com/ibombonato/coursera-getdata-project/master/run_analysi
 ```
 You are done!  
 A view from R should open with the tidy dataset for your analysis.  
-To see what happens inside the script, read the __method #3__ bellow.
+To see what happens inside the script, read the [method-3-run-the-script-manually](method #3) bellow.
 
 ##### __Method #2__ Run the script direct on your computer:
 	1. Download and put the "run_analysis.R" in your working directory.
